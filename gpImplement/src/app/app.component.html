@@ -16,6 +16,7 @@
 
     <div *ngIf = 'viewControl.displayDict["custPage"] == true'>
         <!-- The customer portal tab custom selector tag goes here -->
+        <app-customer-tab></app-customer-tab>
     </div>
 
     <div *ngIf = 'viewControl.displayDict["empPage"] == true'>
@@ -23,7 +24,7 @@
     </div>
 
     <div *ngIf = 'viewControl.displayDict["createCust"] == true'>
-        <app-create-cust-acct></app-create-cust-acct>>
+         <app-create-cust-acct></app-create-cust-acct>
     </div>
 
 

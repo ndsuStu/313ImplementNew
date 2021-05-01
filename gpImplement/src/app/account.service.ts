@@ -47,7 +47,9 @@ export class AccountService {
       custId: 2,
       firstName: "Dalinar",
       lastName: "Kholin",
-      orders: [],
+      orders: [
+        {orderNum: 12345, date: "6-22-21", descr: "Remove two trees from east side of house", amount: 1400},
+      ],
       cardNumber: "1234567890123456",
       unpaidBalance: 0
     }, 
