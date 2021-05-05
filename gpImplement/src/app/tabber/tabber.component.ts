@@ -3,6 +3,8 @@ import { ConnectingService } from "./../connecting.service";
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {ViewControlService} from './../view-control.service';
+import {AccountService} from "./../account.service";
 // import { LoggingService } from "./../logging.service";
 
 export interface Tile {
@@ -265,16 +267,16 @@ export class TabberComponent implements OnInit {
   }
 
 
-  constructor(private acctService: ConnectingService) { }
+  constructor(private acctService: ConnectingService, private accountService: AccountService, private viewControl: ViewControlService) { }
   //private logServe: LoggingService
+  
+  
 
   ngOnInit(): void {this.acctService.statusEdited1.subscribe(
     (id: boolean) => (this.showOrHide1 = id)
   );
 
-  //this.logService.isEmp.subscribe(
-  //  (id: boolean) => (this.isEmp = id)
- // );
+  this.isEmp = this.AccountService.isEmployee;
 
   this.acctService.statusEdited2.subscribe(
     (id: boolean) => (this.showOrHide2 = id)
