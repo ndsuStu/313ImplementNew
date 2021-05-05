@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {ViewControlService} from '../view-control.service';
+import {AccountService} from "../account.service";
+import{Customer} from "../CustomerAcct/customer";
 
 @Component({
   selector: 'app-customer-tab',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerTabComponent implements OnInit {
 
-  constructor() { }
+  customers:Customer[] = [];
+  @Input() loggedInNum: number = -1;
+
+  constructor(private viewControl : ViewControlService, private accountService: AccountService ) { }
 
   ngOnInit(): void {
+    this.customers = this.accountService.customers;
+    this.loggedInNum = this.viewControl.isCust;
   }
 
 }

@@ -1,11 +1,11 @@
 <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title"></h5>
-      <p class="card-text">Account number: </p>
+      <h5 class="card-title">{{customer.firstName}} {{customer.lastName}}</h5>
+      <p class="card-text">Account number: {{customer.custId}}</p>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">An item</li>
-      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">Card number: {{customer.cardNumber}}</li>
+      <li class="list-group-item">Unpaid balance: {{customer.unpaidBalance}}</li>
       <li class="list-group-item">A third item</li>
     </ul>
     <div class="card-body">

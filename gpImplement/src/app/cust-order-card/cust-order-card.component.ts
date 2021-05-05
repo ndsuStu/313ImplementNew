@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {Order} from '../CustomerAcct/order';
 
 @Component({
   selector: 'app-cust-order-card',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cust-order-card.component.css']
 })
 export class CustJobCardComponent implements OnInit {
+
+  @Input() order: Order = {orderNum:0,date:'',descr:'',amount: 0};
 
   constructor() { }
 

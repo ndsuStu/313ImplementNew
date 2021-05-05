@@ -25,7 +25,7 @@ export class AccountService {
   }
 
   //this array holds all customers in sorted order by last name (Note that is alphabetical to begin with)
-  private customers: Customer[] = [
+  customers: Customer[] = [
     {
       //THIS OBJECT IS A BLANK OBJECT, SIMPLY HERE TO ALLOW FOR EASE OF ACCESS IN THE ARRAY
       custId: 0,

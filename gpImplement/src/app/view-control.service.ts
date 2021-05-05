@@ -7,6 +7,12 @@ export class ViewControlService {
 
   constructor() { }
 
+  //This variable will be true when an employee has logged in, false otherwise. 
+  isEmp: boolean = false;
+
+  //this variable will be 0 if the customer hasn't logged in, and otherwise it will be the customer's account number
+  isCust: number = -1;
+
   //This dictionary contains every variable used to control which component is displayed. FEEL FREE TO ADD TO IT AS YOU SEE NECESSARY
   
   

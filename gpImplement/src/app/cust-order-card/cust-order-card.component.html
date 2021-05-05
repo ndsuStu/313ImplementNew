@@ -1,1 +1,10 @@
-<p>cust-job-card works!</p>
+<div class="card">
+    <div class="card-header">
+      Order: {{order.orderNum}}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Date: {{order.date}}</li>
+      <li class="list-group-item">Description: {{order.descr}}</li>
+      <li class="list-group-item">Amount: ${{order.amount}}</li>
+    </ul>
+  </div>
