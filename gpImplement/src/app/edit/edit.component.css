@@ -1,0 +1,18 @@
+.card {
+    margin-bottom: 1rem;
+    width: 150%;
+  }
+  button {
+    margin-right: 0.5rem;
+    padding-top: 0.5rem;
+  }
+  
+  .form-control {
+    margin-bottom: 1rem;
+  }
+  #selector {
+    padding-top: 1rem;
+  }
+  .container {
+      width: 50%;
+  }

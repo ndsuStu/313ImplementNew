@@ -1,0 +1,462 @@
+<div  *ngIf="editBool" class="container align-items-center">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="title">Edit Contact</h4>
+        <div class="fluid-container">
+          <div class="row justify-content-center">
+            <label for="firstName" class="col col-form-label">Title Text: </label>
+  
+            <div class="col">
+              <input
+                type="text"
+                #title
+                id="firstName"
+                value="{{newID}}"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="justify-content-center">
+            <div class="row">
+              <label class="col col-form-label">First Announccement: </label>
+              <div class="col">
+                <input
+                  type="text"
+                  #firstA
+                  class="form-control"
+                  value="{{newID9}}"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="justify-content-center">
+            <div class="row">
+              <label class="col col-form-label">Second Announcement: </label>
+              <div class="col">
+                <input
+                  type="text"
+                  #secondA
+                  class="form-control"
+                  value="{{newID10}}"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <label for="lastName" class="col col-form-label">First Advertisement Column</label>
+            <div class="col">
+              <input
+                type="text"
+                #firstAdv
+                id="lastName"
+                value="{{newID2}}"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <label class="col col-form-label">Second Advertisement Column: </label>
+            <div class="col">
+              <input
+                type="text"
+                #secondAdv
+                class="form-control"
+                value="{{newID3}}"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <label class="col col-form-label">Third Advertisement Column: </label>
+            <div class="col">
+              <input
+                type="text"
+                #thirdAdv
+                class="form-control"
+                value="{{newID4}}"
+              />
+            </div>
+          </div>
+          <div class="justify-content-center">
+            <div class="row">
+              <label class="col col-form-label">Help Info: </label>
+              <div class="col">
+                <input
+                  type="text"
+                  #help
+                  class="form-control"
+                  value="{{newID5}}"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="justify-content-center">
+            <div class="row">
+              <label class="col col-form-label">Closing Statement: </label>
+              <div class="col">
+                <input
+                  type="text"
+                  #closing
+                  class="form-control"
+                  value="{{newID6}}"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="justify-content-center">
+            <div class="row">
+              <label class="col col-form-label">Information Paragraph 1: </label>
+              <div class="col">
+                <input
+                  type="text"
+                  #infoPar1
+                  class="form-control"
+                  value="{{newID11}}"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="justify-content-center">
+            <div class="row">
+              <label class="col col-form-label">Information Paragraph 2: </label>
+              <div class="col">
+                <input
+                  type="text"
+                  #infoPar2
+                  class="form-control"
+                  value="{{newID7}}"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="justify-content-center">
+            <div class="row">
+              <label class="col col-form-label">Information Paragraph 3: </label>
+              <div class="col">
+                <input
+                  type="text"
+                  #infoPar3
+                  class="form-control"
+                  value="{{newID8}}"
+                />
+              </div>
+            </div>
+          </div>
+      
+            <button
+              class="btn btn-primary rounded-pill"
+              (click)="edit(title.value, firstA.value,secondA.value, firstAdv.value, secondAdv.value, thirdAdv.value, help.value, closing.value, infoPar1.value, infoPar2.value, infoPar3.value)"
+            >
+              Submit Changes
+            </button>
+            <button class="btn btn-primary rounded-pill" (click)="onClick()">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <div  *ngIf="b1" class="container align-items-center">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="title">Edit User 1</h4>
+  <div class="row">
+    <label for="lastName" class="col col-form-label">Name</label>
+    <div class="col">
+      <input
+        type="text"
+        #p1N
+        id="lastName"
+        value="{{pID1n}}"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <label class="col col-form-label">Job</label>
+    <div class="col">
+      <input
+        type="text"
+        #p1J
+        class="form-control"
+        value="{{pID1j}}"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <label class="col col-form-label">Photo</label>
+    <div class="col">
+      <input
+        type="text"
+        #p1P
+        class="form-control"
+        value="{{pID1p}}"
+      />
+    </div>
+  </div>
+  <div class="justify-content-center">
+    <div class="row">
+      <label class="col col-form-label">Description</label>
+      <div class="col">
+        <input
+          type="text"
+          #p1D
+          class="form-control"
+          value="{{pID1d}}"
+        />
+      </div>
+    </div>
+    <button
+              class="btn btn-primary rounded-pill"
+              (click)="p1(p1N.value, p1J.value, p1P.value, p1D.value)"
+            >
+              Submit Changes
+            </button>
+  </div>
+  </div>    
+    </div>
+  </div>
+  <div  *ngIf="b2" class="container align-items-center">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="title">Edit User 2</h4>
+  <div class="row">
+    <label for="lastName" class="col col-form-label">Name</label>
+    <div class="col">
+      <input
+        type="text"
+        #p2N
+        id="lastName"
+        value="{{pID2n}}"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <label class="col col-form-label">Job</label>
+    <div class="col">
+      <input
+        type="text"
+        #p2J
+        class="form-control"
+        value="{{pID2j}}"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <label class="col col-form-label">Photo</label>
+    <div class="col">
+      <input
+        type="text"
+        #p2P
+        class="form-control"
+        value="{{pID2p}}"
+      />
+    </div>
+  </div>
+  <div class="justify-content-center">
+    <div class="row">
+      <label class="col col-form-label">Description</label>
+      <div class="col">
+        <input
+          type="text"
+          #p2D
+          class="form-control"
+          value="{{pID2d}}"
+        />
+      </div>
+    </div>
+    <button
+              class="btn btn-primary rounded-pill"
+              (click)="p2(p2N.value, p2J.value, p2P.value, p2D.value)"
+            >
+              Submit Changes
+            </button>
+  </div>
+      </div>
+    </div>
+  </div>
+
+  <div  *ngIf="b3" class="container align-items-center">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="title">Edit User 3</h4>
+  <div class="row">
+    <label for="lastName" class="col col-form-label">Name</label>
+    <div class="col">
+      <input
+        type="text"
+        #p3N
+        id="lastName"
+        value="{{pID3n}}"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <label class="col col-form-label">Job</label>
+    <div class="col">
+      <input
+        type="text"
+        #p3J
+        class="form-control"
+        value="{{pID3j}}"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <label class="col col-form-label">Photo</label>
+    <div class="col">
+      <input
+        type="text"
+        #p3P
+        class="form-control"
+        value="{{pID3p}}"
+      />
+    </div>
+  </div>
+  <div class="justify-content-center">
+    <div class="row">
+      <label class="col col-form-label">Description</label>
+      <div class="col">
+        <input
+          type="text"
+          #p3D
+          class="form-control"
+          value="{{pID3d}}"
+        />
+      </div>
+    </div>
+    <button
+              class="btn btn-primary rounded-pill"
+              (click)="p3(p3N.value, p3J.value, p3P.value, p3D.value)"
+            >
+              Submit Changes
+            </button>
+  </div>
+      </div>
+    </div>
+  </div>
+  <div  *ngIf="b4" class="container align-items-center">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="title">Edit User 4</h4>
+  <div class="row">
+    <label for="lastName" class="col col-form-label">Name</label>
+    <div class="col">
+      <input
+        type="text"
+        #p4N
+        id="lastName"
+        value="{{pID4n}}"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <label class="col col-form-label">Job</label>
+    <div class="col">
+      <input
+        type="text"
+        #p4J
+        class="form-control"
+        value="{{pID4j}}"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <label class="col col-form-label">Photo</label>
+    <div class="col">
+      <input
+        type="text"
+        #p4P
+        class="form-control"
+        value="{{pID4p}}"
+      />
+    </div>
+  </div>
+  <div class="justify-content-center">
+    <div class="row">
+      <label class="col col-form-label">Description</label>
+      <div class="col">
+        <input
+          type="text"
+          #p4D
+          class="form-control"
+          value="{{pID4d}}"
+        />
+      </div>
+    </div>
+    <button
+              class="btn btn-primary rounded-pill"
+              (click)="p4(p4N.value, p4J.value, p4P.value, p4D.value)"
+            >
+              Submit Changes
+            </button>
+  </div>
+      </div>
+    </div>
+  </div>
+
+  <div  *ngIf="b5" class="container align-items-center">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="title">Edit User 5</h4>
+  <div class="row">
+    <label for="lastName" class="col col-form-label">Name</label>
+    <div class="col">
+      <input
+        type="text"
+        #p5N
+        id="lastName"
+        value="{{pID5n}}"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <label class="col col-form-label">Job</label>
+    <div class="col">
+      <input
+        type="text"
+        #p5J
+        class="form-control"
+        value="{{pID5j}}"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <label class="col col-form-label">Photo</label>
+    <div class="col">
+      <input
+        type="text"
+        #p5P
+        class="form-control"
+        value="{{pID5p}}"
+      />
+    </div>
+  </div>
+  <div class="justify-content-center">
+    <div class="row">
+      <label class="col col-form-label">Description</label>
+      <div class="col">
+        <input
+          type="text"
+          #p5D
+          class="form-control"
+          value="{{pID5d}}"
+        />
+      </div>
+    </div>
+    <button
+              class="btn btn-primary rounded-pill"
+              (click)="p5(p5N.value, p5J.value, p5P.value, p5D.value)"
+            >
+              Submit Changes
+            </button>
+  </div>
+      </div>
+    </div>
+  </div>
+  

@@ -11,7 +11,7 @@
     <button (click) = "setViewEmp()">Employee Portal</button>
 
     <div *ngIf = 'viewControl.displayDict["genInfo"] == true'>
-        <!-- The general info tab custom selector tag goes here -->
+        <app-tabber></app-tabber>
     </div>
 
     <div *ngIf = 'viewControl.displayDict["custPage"] == true'>
