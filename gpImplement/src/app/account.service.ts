@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Customer } from './CustomerAcct/customer';
 import { Order } from './CustomerAcct/order';
+import {Employee} from './EmployeeAcct/employee';
 
 //Created by Evan Dramko
 @Injectable({
@@ -10,18 +11,15 @@ export class AccountService {
 
   constructor() { }
 
-  //stores whether an employee has logged in.
-  isEmployee: boolean = false;
-
   //=========================----------------------------================================
   //========================= Customer Storage and Login ================================
   //=========================----------------------------================================
 
   //Stores the next id number available for use
-  private nextID: number = 4;
+  private nextCustID: number = 4;
 
-  getNextID(): number{
-    return this.nextID;
+  getNextCustID(): number{
+    return this.nextCustID;
   }
 
   //this array holds all customers in sorted order by last name (Note that is alphabetical to begin with)
@@ -63,7 +61,7 @@ export class AccountService {
 
   addCustAcct(cust: Customer){
     this.customers.push(cust);
-    this.nextID++;
+    this.nextCustID++;
   }
 
   //Just your classic accessor
@@ -78,5 +76,46 @@ export class AccountService {
     this.customers[id].orders.push(ord);
   }
 
+  //=========================----------------------------================================
+  //========================= Employee Storage and Login ================================
+  //=========================-------Dylan Schaefer-------================================
+
+  //stores whether an employee has logged in.
+  isEmployee: boolean = false;
+
+  private nextEmpId: number = 3
+
+  private employees: Employee[] = [
+    {
+      //To keep from differing in the service, leaving the first array index blank as well
+      empId: 0,
+      firstName: 'EMPTY',
+      lastName: 'EMPTY'
+    },
+    {
+      empId: 1,
+      firstName: 'Lewis',
+      lastName: 'Hamilton'
+    },
+    {
+      empId: 2,
+      firstName: 'Max',
+      lastName: 'Verstappen'
+    }
+
+  ]
+
+  getNextEmpId(){
+    return this.nextEmpId;
+  }
+
+  addEmpAccount(employee: Employee){
+    this.employees.push(employee);
+    this.nextEmpId++;
+  }
+
+  getEmpAccount(index: number){
+    return this.employees[index]
+  }
 
 }

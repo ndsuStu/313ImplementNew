@@ -1,0 +1,30 @@
+/* created by Dylan Schaefer */
+.column {
+    float: left;
+    width: 33.33%;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: coral;
+  text-align: center;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color:cadetblue;
+}
+
+.days {
+  padding: 10px 0;
+  background: whitesmoke;
+  margin: 0;
+}

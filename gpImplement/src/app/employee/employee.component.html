@@ -1,0 +1,48 @@
+<!--created by Dylan Schaefer-->
+
+<input type="text" [(ngModel)] = 'employeeId'>Enter Employee ID
+<input type="text" [(ngModel)] = 'employeeFirstName'>Enter Employee's First Name
+<input type="text" [(ngModel)] = 'employeeLastName'>Enter Employee's Last Name
+<button>Submit</button>
+
+<div *ngIf = 'employeeList[employeeId].firstName == employeeName && employeeList[employeeId].firstName == employeeLastName' class="row">
+
+    <div class="column"> Orders
+        <ul>
+            <td *ngFor = 'let customer of customerList'>{{customer.firstName}} {{customer.lastName}} <br>{{customer.orders}}</td>
+        </ul>
+    </div>
+
+    <div class="column">
+        <img src="src\app\data-graphs\graph.png" alt="income_graph">
+    </div>
+
+    <div class="column">
+
+    </div>
+
+</div>
+
+<div>
+    <div class="month">
+        <ul>
+          <li><span style="font-size:18px">@DateTime.Today.ToString("MMMM") 2021</span></li>
+        </ul>
+      </div>
+      
+      <ul class="days_in_week">
+        <li>Monday</li>
+        <li>Tuesday</li>
+        <li>Wednesday</li>
+        <li>Thursday</li>
+        <li>Friday</li>
+        <li>Saturday</li>
+        <li>Sunday</li>
+      </ul>
+      
+      <ul class="days">
+        <li *ngFor = 'let date of datesArray'>{{date}}<br>
+            <button (click) = 'onPress()'>Edit Date</button>
+        </li>
+      </ul>
+</div>

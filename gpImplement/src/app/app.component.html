@@ -19,7 +19,7 @@
     </div>
 
     <div *ngIf = 'viewControl.displayDict["empPage"] == true'>
-        <!-- The employee portal tab custom selector tag goes here -->
+        <app-employee></app-employee>
     </div>
 
     <div *ngIf = 'viewControl.displayDict["createCust"] == true'>
@@ -29,3 +29,25 @@
 
 
 </body>
+
+<div>
+    <div class="month">
+        <ul>
+          <li><span style="font-size:18px">@DateTime.Today.ToString("MMMM") 2021</span></li>
+        </ul>
+      </div>
+      
+      <ul class="days_in_week">
+        <li>Monday</li>
+        <li>Tuesday</li>
+        <li>Wednesday</li>
+        <li>Thursday</li>
+        <li>Friday</li>
+        <li>Saturday</li>
+        <li>Sunday</li>
+      </ul>
+      
+      <ul class="days">
+        <li *ngFor = 'let date of datesArray'>{{date}}</li>
+      </ul>
+</div>
