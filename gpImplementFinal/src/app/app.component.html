@@ -1,0 +1,34 @@
+<head>
+    <em>Landscaping Pro</em>
+</head>
+
+<body>
+    <header>Landscaping Pro <br></header>
+
+    <app-login-comp></app-login-comp>
+
+    <button (click) = "setViewCust()">Cusomer Portal</button>
+    <button (click) = "setViewGenInfo()">See Company Information</button>
+    <button (click) = "setViewCreateCust()">Create Account</button>
+    <button (click) = "setViewEmp()">Employee Portal</button>
+
+    <div *ngIf = 'viewControl.displayDict["genInfo"] == true'>
+        <!-- The general info tab custom selector tag goes here -->
+    </div>
+
+    <div *ngIf = 'viewControl.displayDict["custPage"] == true'>
+        <!-- The customer portal tab custom selector tag goes here -->
+        <app-customer-tab></app-customer-tab>
+    </div>
+
+    <div *ngIf = 'viewControl.displayDict["empPage"] == true'>
+        <!-- The employee portal tab custom selector tag goes here -->
+    </div>
+
+    <div *ngIf = 'viewControl.displayDict["createCust"] == true'>
+         <app-create-cust-acct></app-create-cust-acct>
+    </div>
+
+
+
+</body>
