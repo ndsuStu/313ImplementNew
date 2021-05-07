@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ViewControlService } from './view-control.service';
 
 @Component({
@@ -6,7 +6,14 @@ import { ViewControlService } from './view-control.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+
+  datesVar: number = 0;
+  datesArray: number[] = [];
+
+  ngOnInit(){
+    this.createDates()
+  }
 
   constructor(public viewControl: ViewControlService){  }
 
@@ -25,4 +32,12 @@ export class AppComponent {
   setViewEmp(){
     this.viewControl.changeViewTo("empPage");
   }
-}
+
+  createDates(){
+  for (this.datesVar = 1; this.datesVar < 31; this.datesVar++) {
+    this.datesArray.push(this.datesVar);
+    }
+  }
+
+  }
+
